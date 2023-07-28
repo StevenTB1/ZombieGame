@@ -1,0 +1,36 @@
+html,body {
+  height: 100%;
+}
+
+#gameScreen{
+  border: 2px solid black;
+}
+
+body{
+  display: block;
+  margin: 8px;
+}
+
+#fps{
+  text-align: center;
+  font-size: 40px;
+}
+
+#title{
+  border: 2px solid black;
+  width: 960px;
+  height: 540px;
+}
+
+#rules{
+  border: 2px solid black;
+  width: 960px;
+  height: 540px;
+}
+
+#end{
+  border: 2px solid black;
+  width: 960px;
+  height: 540px;
+}
+

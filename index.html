@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id='title' onclick="runRule()">
+    <img src="./images/title.png" width="960" height="540">
+  </div>
+
+  <div id='rules' onclick="runGame()" style="display: none" ;>
+    <img src="./images/Rule.png" width="960" height="540">
+  </div>
+
+  <div id='end' onclick="runGame()" style="display: none" ;>
+    <img src="./images/END.png" width="960" height="540">
+  </div>
+  
+  <div id='win' onclick="runGame()" style="display: none">
+    <img src="./images/win.png" width="960" height="540">
+  </div>
+  
+  <canvas id='gameScreen' style="display: none";></canvas>
+  <div id="fps"></div>
+
+  <script src='controller.js'></script>
+  <script src='./bullet/bullet.js'></script>
+  <script src='./bullet/bulletController.js'></script>
+  <script src='./bullet/bulletTypeA.js'></script>
+  <script src='./bullet/bulletTypeB.js'></script>
+  <script src='./bullet/bulletTypeC.js'></script>
+  <script src='./bullet/bulletTypeD.js'></script>
+  <script src='./vampire/vampire.js'></script>
+  <script src='./vampire/vampireControl.js'></script>
+  <script src='./vampire/vampireTypeA.js'></script>
+  <script src='./vampire/vampireTypeB.js'></script>
+  <script src='./vampire/vampireTypeC.js'></script>
+  <script src='./vampire/vampireTypeD.js'></script>
+  <script src='physics.js'></script>
+  <script src='player.js'></script>
+  <script src='game.js'></script>
+  <script src='background.js'></script>
+  <script src='healthbar.js'></script>
+  <script src='fps.js'></script>
+  <script src='obstacles.js'></script>
+  <script src='killCount.js'></script>
+  <script src='canvas.js'></script>
+  <script>
+    
+    function runRule() {
+      document.getElementById('gameScreen').style.display = "none";
+      document.getElementById('title').style.display = "none";
+      document.getElementById('end').style.display = "none";
+      document.getElementById('win').style.display = "none";
+      document.getElementById('rules').style.display = "block";
+    }
+
+    function runGame() {
+      document.getElementById('end').style.display = "none";
+      document.getElementById('gameScreen').style.display = "block";
+      document.getElementById('title').style.display = "none";
+      document.getElementById('rules').style.display = "none";
+      document.getElementById('win').style.display = "none";
+      new Canvas();
+    }
+  </script>
+
+</body>
+
+</html>
